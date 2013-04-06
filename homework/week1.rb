@@ -11,13 +11,23 @@ require "test/unit"
 #######################################################
 
 def say_hello
+    return "Hi!"
 end
 
 def shout(input)
+    return input.upcase
 end
 
 def secret_code(input)
+    if input.length > 5
+        input2 = input.slice(0,1).downcase + input.slice(1,1).upcase + input.slice(2..-1).downcase
+        return input2.reverse
+    else
+        return input.capitalize.reverse.swapcase
+    end
 end
+
+
 
 # DO NOT CHANGE THE CODE BELOW THIS LINE.
 #
